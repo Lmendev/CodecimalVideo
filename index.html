@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Codecimal Video</title>
 </head>
 <style>
     body {
         margin: 0;
-        background-color: #ab88ff;
+        background-color: #8f57fd;
+        font-family: 'Poppins', sans-serif;
     }
 
     header{
         display: flex;
         justify-content: space-between;
-        margin: 0 2rem;
+        margin: 0 18rem;
     }
     
     header > img {
         width: 20rem;
+        height: 5rem;
     }
 
     header nav ul li img {
@@ -27,14 +31,51 @@
 
     header nav ul {
         list-style-type: none;
+        text-align: right;
         padding: 0;
+    }
+
+    header nav ul:hover ul{
+        display: block;
     }
 
     header nav ul li ul {
         display: none;
     }
 
-    
+    header nav a{
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    header nav ul li ul li a:hover{
+        text-decoration: underline;
+    }
+
+    .header-menu-profile {
+        display: inline-flex;
+        align-items: end;
+    }
+
+    main h2{
+        color: #ffffff;
+    }
+
+    .input-text{
+        border: 2px solid #ffffff;
+        border-radius: 2rem;
+        color:#ffffff;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.4rem;
+        padding: 0 1rem;
+        width: 70%;
+        background-color: rgba(255, 255, 255, .1);
+    }
+
+    ::placeholder{
+        color: #ffffff;
+    }
+
 </style>
 <body>
     <header>
@@ -43,8 +84,10 @@
         <nav>
             <ul>
                 <li>
-                    <img src="./img/user-icon.png" alt="Logo usuario">
-                    <a href="">Perfil</a>
+                    <div class="header-menu-profile">
+                        <img src="./img/user-icon.png" alt="Logo usuario">
+                        <a href="">Perfil</a>
+                    </div>
                     <ul>
                         <li><a href="">Cuenta</a></li>
                         <li><a href="">Cerrar Sesión</a></li>
@@ -53,5 +96,10 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <h2>¿Qué quieres ver hoy?</h2>
+        <input class="input-text" type="text" name="" id="" placeholder="Buscar...">
+    </main>
 </body>
 </html>
