@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    background-color: #8f57fd;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 18rem;
+}
+
+header > img {
+    width: 20rem;
+    height: 5rem;
+}
+
+header nav ul li img {
+    width: 1.5rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    text-align: right;
+    padding: 0;
+}
+
+header nav ul:hover ul{
+    display: block;
+}
+
+header nav ul li ul {
+    display: none;
+}
+
+header nav a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header nav ul li ul li a:hover{
+    text-decoration: underline;
+}
+
+.header-menu-profile {
+    display: inline-flex;
+    align-carousel-items: end;
+}
+
+main{
+    text-align: center;
+}
+
+main h2{
+    color: #ffffff;
+}
+
+.input-text{
+    border: 2px solid #ffffff;
+    border-radius: 2rem;
+    color:#ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    padding: 0 1rem;
+    width: 40%;
+    background-color: rgba(255, 255, 255, .1);
+    outline: none;
+}
+
+::placeholder{
+    color: #ffffff;
+}
+
+
+/*Carousel*/
+
+.carousel{
+    width: 100%;
+    overflow: scroll;
+    
+
+    padding: 30px;
+    position: relative;
+}
+
+.carousel .container{
+    white-space: nowrap;
+    margin: 70px 0;
+    padding-bottom: 10px;
+
+    
+}
+.carousel .container .carousel-item {
+    background-color: rgb(101, 1, 194);
+    width:200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms;
+    transform-origin: center left;
+    position: relative;
+}
+
+.carousel .container .carousel-item:hover ~ .carousel-item {
+    transform: translate3d(100px, 0, 0);
+}
+
+.carousel .container:hover .carousel-item {
+    opacity: .3;
+}
+
+.carousel .container:hover .carousel-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.carousel-item__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}      
+
+.carousel-item__details{
+    background: linear-gradient(to top, rgba(0, 0, 0, .9) 0%, rgba(0, 0, 0, 0) 100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.carousel-item:hover .carousel-item__details{
+    opacity: 1;
+}
